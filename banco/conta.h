@@ -23,9 +23,15 @@ class Conta: public Cliente{
                 break;
             case 2:
                 /* Conta estudante idade > 6 & < 27 */
+                if (_idade <= 6 || _idade > 27){
+                    i = contaInvalida(i, _idade);
+                }
                 break;
             case 3:
                 /* Conta aforro junior idade >= 0 & <= 6 */
+                if (_idade > 6){
+                    i = contaInvalida(i, _idade);
+                }
                 break;
             case 4:
                 /* Conta investidor */
